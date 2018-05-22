@@ -12,4 +12,16 @@ public class LogToken {
         this.method = method;
         this.message = message;
     }
+
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public HttpMethod getMethod() {
+        return method;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }
