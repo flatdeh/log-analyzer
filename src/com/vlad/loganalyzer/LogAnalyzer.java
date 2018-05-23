@@ -20,7 +20,7 @@ public class LogAnalyzer {
         List<LogToken> logTokenList = new ArrayList<>();
         File file = new File(path);
         try (InputStream inputStream = new FileInputStream(file);
-             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));) {
+             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
             String log;
             while ((log = bufferedReader.readLine()) != null) {
                 LogToken logToken = new LogToken(parseTime(log), parseMethod(log), parseMessage(log));
